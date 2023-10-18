@@ -8,13 +8,16 @@ const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
 
   const handleRegister = async () => {
-    try {
-      const response = await axios.post('YOUR_API_ENDPOINT', { name, email });
+    try 
+    {
+      const response = await axios.post('http://localhost:49418/api/register', { name, email });
       // Handle the API response
       console.log(response.data);
       // Navigate to the Profile screen after successful registration
       navigation.navigate('Profile', { name, email });
-    } catch (error) {
+    } 
+    catch (error) 
+    {
       // Handle errors here
       console.error(error);
     }

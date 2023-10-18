@@ -5,7 +5,7 @@ import { View, Button } from 'react-native';
 const HomeScreen = ({ navigation }) => {
   return (
     <View>
-      <Button title="Register" onPress={() => navigation.navigate('Register')} />
+      <Button title="Create" onPress={() => navigation.navigate('Register')} />
     </View>
   );
 };
