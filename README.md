@@ -1,6 +1,22 @@
 # Registration-App
 A Registration App is a web or mobile application designed to streamline the process of user registration and sign-up. It serves as a user-friendly gateway for individuals or entities to become part of an online community, service, or organization.
 
+## Design Inspiration Links
+### 1. Link 1
+https://www.freepik.com/premium-vector/mobile-app-login-registration-screen-template_1576877.htm
+
+### 2. Link 2
+https://dribbble.com/shots/11622319-Dark-and-Light-Mode-Registration-Process-Design/attachments/3244396?mode=media
+
+### 3. Link 3
+https://youtu.be/YxDlWHyk9z4
+
+### 4. Link 4
+https://youtu.be/mJ3bGvy0WAY
+
+### 5. Link 5
+https://youtu.be/5RUl8exLI-c
+
 ## Process
 ### 1. Clone the Project
 Clone the project repository to the local machine using a version control like Git. Navigate to the directory where you want to store the project and run the command : **"git clone <repository_url>"**.
