@@ -86,3 +86,15 @@ To run the app, use Expo's development server, which can be started with the **'
 The Expo DevTools in the web browser provide a QR code, which can be scanned with the Expo Go app on a physical device. 
 This loads the app on the device for further testing.
 Alternatively, the app can be run on an emulator or simulator, as explained in the Expo DevTools.
+
+## File Structure
+### 1. node_modules
+This directory contains all the dependencies and packages that the project relies on. It's managed by **Node Package Manager (npm)** or **Yarn**.
+
+### 2. public
+This is a directory where various assets and resources are stored, which are publicly accessible within the app. In this case, a folder called **images** has been created inside this directory, containing the **background** image and the **logo** icon for the app.
+
+### 3. src
+A directory used to structure the code for better organization and maintainability. This contains a folder **components** which contains a file **Database.js**.
+
+## Database Implementation
