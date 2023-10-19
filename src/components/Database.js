@@ -6,16 +6,15 @@ const User = require('./models/User'); // Your Mongoose User Model
 const app = express();
 
 // models/User.js
-
 const userSchema = new mongoose.Schema({
   User_Email_ID: String,
-  Password: String, // Make sure to store hashed passwords
+  Password: String, // Store hashed passwords
 });
 
 module.exports = mongoose.model('User', userSchema);
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:49418/your-database-name', {
+mongoose.connect('mongodb://localhost:3000/User-Registration-System', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -37,7 +36,7 @@ app.post('/register', async (req, res) => {
 // server.js
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb://localhost:49418/your-database-name';
+const uri = 'mongodb://localhost:3000/User-Registration-System';
 
 async function watchUserRegistrations() {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
@@ -53,9 +52,9 @@ async function watchUserRegistrations() {
     changeStream.on('change', (change) => {
       if (change.operationType === 'insert') 
       {
-        // A new user has been registered; you can perform updates here
+        // A new user has been registered; can perform updates here
         console.log('New user registered:', change.fullDocument);
-        // Perform your update operations here
+        // Perform update operations here
       }
     });
   } 

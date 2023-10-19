@@ -10,7 +10,7 @@ const RegisterScreen = ({ navigation }) => {
   const handleRegister = async () => {
     try 
     {
-      const response = await axios.post('http://localhost:49418/api/register', { name, email });
+      const response = await axios.post('http://localhost:3000/api/register', { name, email });
       // Handle the API response
       console.log(response.data);
       // Navigate to the Profile screen after successful registration
