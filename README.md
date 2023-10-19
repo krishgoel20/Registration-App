@@ -18,14 +18,38 @@ https://youtu.be/mJ3bGvy0WAY
 https://youtu.be/5RUl8exLI-c
 
 ## Process
-### 1. Clone the Project
-Clone the project repository to the local machine using a version control like Git. Navigate to the directory where you want to store the project and run the command : **"git clone <repository_url>"**.
 
-### 2. Install Dependencies
-Navigate to the project's root directory and install the project's dependencies by running : **"npm install"**. This command will install all the required libraries and packages listed in the **'package.json'** file.
+To run the React Native app using Expo :
 
-### 3. Start the Development Server
-To run the React App locally, run the command : **"npm start"** in Terminal / Command Prompt / Git Bash. This command will start the Development Server, and the app should open in a new browser window.
+### 1. Pre-requisites
+Make sure to have **Node.js** installed on the machine. It can be downloaded from **"https://nodejs.org/en"**.
+Install Expo CLI globally. This can be done by running the command : **npm install -g expo-cli**.
+Ensure to have Expo Go installed on your Android or iOS device if it's planned to run the app on a physical device.
+
+### 2. Set up the Project
+Create a new directory for the project and navigate to it in the Terminal.
+Create a new Expo project using the **"expo init"** command : **expo init Registration-App**. Choose the "blank" template or any other template preferred.
+Follow the prompts to configure the project. This generates a project structure with the necessary files.
+
+### 3. Navigate to the Project directory
+Use the command : **cd Registration-App**.
+
+### 4. Start the Development server
+To start the development server, use the command : **expo start**.
+This will open a new tab in the web browser with the Expo DevTools. A QR code will be visible that can be used to run the app on a physical device, as well as options for running on a simulator or emulator.
+
+### 5. Running on Physical Device
+Open the Expo Go app on your physical device (Android or iOS).
+Scan the QR code from the Expo DevTools in the browser using the Expo Go app. This will load the app on the device.
+
+### 6. Running on Emulator/Simulator
+Select the appropriate option from the Expo DevTools in the web browser.
+
+### 7. View the App
+The app can be now seen running on the physical device or the emulator/simulator.
+
+### 8. Code and Test
+Changes can be made to the code, and the Expo development server will automatically reload the app with the new code changes. The updates can be seen on the device or the emulator in real-time.
 
 ## Implementation
 ### 1. Setting up the Project
