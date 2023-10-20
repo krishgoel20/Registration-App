@@ -9,13 +9,13 @@
 ### 2. Link 2
 + https://dribbble.com/shots/11622319-Dark-and-Light-Mode-Registration-Process-Design/attachments/3244396?mode=media
 
-### 3. Link 3
+### 3. YouTube Link 1
 + https://youtu.be/YxDlWHyk9z4
 
-### 4. Link 4
+### 4. YouTube Link 2
 + https://youtu.be/mJ3bGvy0WAY
 
-### 5. Link 5
+### 5. YouTube Link 3
 + https://youtu.be/5RUl8exLI-c
 
 ## Process
