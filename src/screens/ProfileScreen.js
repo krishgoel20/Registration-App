@@ -8,7 +8,7 @@ const ProfileScreen = ({ route }) => {
   return (
     <View>
       <Text>Name: {name}</Text>
-      <Text>Email: {email}</Text>
+      <Text>E-mail: {email}</Text>
     </View>
   );
 };

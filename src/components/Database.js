@@ -1,7 +1,7 @@
 // server.js
 const express = require('express');
 const mongoose = require('mongoose');
-const User = require('./models/User'); // Your Mongoose User Model
+const User = require('./models/User'); // Mongoose User Model
 
 const app = express();
 
@@ -9,7 +9,7 @@ const app = express();
 const userSchema = new mongoose.Schema({
   Username: String,
   Password: String,
-  Email_ID: String, // Store hashed passwords
+  Email_ID: String, // Store Hashed Passwords
 });
 
 module.exports = mongoose.model('User', userSchema);
@@ -20,7 +20,7 @@ mongoose.connect('mongodb://localhost:3000/User_Registration_System', {
   useUnifiedTopology: true,
 });
 
-// Registration endpoint - Registering a new user
+// Registration Endpoint - Registering a New User
 app.post('/register', async (req, res) => {
   try 
   {
@@ -39,7 +39,7 @@ const { MongoClient, ObjectID } = require('mongodb');
 
 const uri = 'mongodb://localhost:3000/User_Registration_System';
 
-async function insertUser() {
+async function createUser() {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
 
   try 
@@ -53,9 +53,8 @@ async function insertUser() {
     changeStream.on('change', (change) => {
       if (change.operationType === 'insert') 
       {
-        // A new user has been registered; can perform updates here
+        // A New User has been registered
         console.log('New user registered:', change.fullDocument);
-        // Perform update operations here
       }
     });
   } 
@@ -69,7 +68,7 @@ async function insertUser() {
   }
 }
 
-insertUser();
+createUser();
 
 async function readUser() {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
@@ -82,21 +81,10 @@ async function readUser() {
 
     const users = await collection.find({}).toArray();
     console.log('User data from the collection: ', users);
-
-    /*const changeStream = collection.watch();
-
-    changeStream.on('change', (change) => {
-      if (change.operationType === 'read') 
-      {
-        // A new user has been registered; can perform updates here
-        console.log('New user registered:', change.fullDocument);
-        // Perform update operations here
-      }
-    });*/
   } 
   catch (error) 
   {
-    console.error('Error reading data from the collection:', error);
+    console.error('Error reading data:', error);
   }
   finally
   {
@@ -120,7 +108,7 @@ async function updateUser(userID, updatedData) {
       { $set: updatedData }
     );
 
-    if (result.modifiedCount > 0)
+    if (result.updatedCount > 0)
     {
       console.log('User data updated successfully');
     }
@@ -128,17 +116,6 @@ async function updateUser(userID, updatedData) {
     {
       console.log('No user data updated');
     }
-
-    /*const changeStream = collection.watch();
-
-    changeStream.on('change', (change) => {
-      if (change.operationType === 'insert') 
-      {
-        // A new user has been registered; can perform updates here
-        console.log('New user registered:', change.fullDocument);
-        // Perform update operations here
-      }
-    });*/
   } 
   catch (error) 
   {
@@ -150,7 +127,7 @@ async function updateUser(userID, updatedData) {
   }
 }
 
-updateUser('YOUR_USER_ID',{ email: 'new-email@example.com', name: 'New Name' });
+updateUser('21BME2347',{ email: 'android@gmail.com', name: 'Android', password: 'android_123' });
 
 async function deleteUser(userID) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
@@ -161,7 +138,9 @@ async function deleteUser(userID) {
     const db = client.db();
     const collection = db.collection('users');
 
-    const result = await collection.deleteOne({ _ID: ObjectID(userID) });
+    const result = await collection.deleteOne(
+      { _ID: ObjectID(userID) }
+    );
 
     if (result.deletedCount > 0)
     {
@@ -171,17 +150,6 @@ async function deleteUser(userID) {
     {
       console.log('No user data deleted');
     }
-
-    /*const changeStream = collection.watch();
-
-    changeStream.on('change', (change) => {
-      if (change.operationType === 'deletion')
-      {
-        // A new user has been registered; can perform updates here
-        console.log('New user registered:', change.fullDocument);
-        // Perform update operations here
-      }
-    });*/
   } 
   catch (error) 
   {
@@ -193,4 +161,4 @@ async function deleteUser(userID) {
   }
 }
 
-deleteUser('YOUR_USER_ID');
+deleteUser('21BME2347');

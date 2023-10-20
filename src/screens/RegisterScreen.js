@@ -12,14 +12,14 @@ const RegisterScreen = ({ navigation }) => {
     try 
     {
       const response = await axios.post('http://localhost:3000/api/register', { name, password, email });
-      // Handle the API response
+      // Handle the API Response
       console.log(response.data);
       // Navigate to the Profile screen after successful registration
       navigation.navigate('Profile', { name, password, email });
     } 
     catch (error) 
     {
-      // Handle errors here
+      // Handle Errors
       console.error(error);
     }
   };
@@ -30,7 +30,7 @@ const RegisterScreen = ({ navigation }) => {
       <TextInput value={name} onChangeText={setName} />
       <Text>Password</Text>
       <TextInput value={password} onChangeText={setPassword} />
-      <Text>Email</Text>
+      <Text>E-mail</Text>
       <TextInput value={email} onChangeText={setEmail} />
       <Button title="Register" onPress={handleRegister} />
     </View>
