@@ -107,7 +107,7 @@ To run the React Native app using Expo :
 + Proper authentication and authorization mechanisms can be used to ensure that only authorized users can access and modify data.
 
 ### 11. Running the App
-+ To run the app, use **Expo's development server**, which can be started with the **expo start** command.
++ To run the app, use **Expo's Development Server**, which can be started with the **expo start** command.
 + The **Expo DevTools** in the web browser provide a QR code, which can be scanned with the **Expo Go** app on a physical device. 
 + This loads the app on the device for further testing.
 + Alternatively, the app can be run on an emulator or simulator, as explained in the **Expo DevTools**.
