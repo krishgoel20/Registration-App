@@ -67,10 +67,10 @@ To run the React Native app using Expo :
 + The **HomeScreen** component contains a single button that, when pressed, navigates the user to the **Register** screen.
 
 ### 4. Register Screen ('RegisterScreen.js')
-+ This is the component where the user can input his/her Name and E-mail ID for registration.
-+ React hooks are used to manage the component's state (**name** and **email** fields).
-+ When the user presses the **Register** button, the **handleRegister** function is called. Inside this function : 
-    + An API call is made to the specified endpoint (**YOUR_API_ENDPOINT**) using Axios to register the user.
++ This is the component where the user can input his/her Username, Password and E-mail ID for registration.
++ React hooks are used to manage the component's state (**name**, **password**, **email** fields).
++ When the user presses the **Register** button, the **handleRegister** function is called. Inside this function :
+    + An API call is made to the specified endpoint (**API_ENDPOINT**) using Axios to register the user.
     + If the registration is successful, the response data is logged to the console and then navigated to the **Profile** screen, passing the user's name and email as route parameters.
     + If an error occurs during registration, the error is logged to the console.
 
@@ -79,38 +79,36 @@ To run the React Native app using Expo :
 + This screen is reached after successful registration and displays the user's registration details.
 
 ### 6. Navigation Container ('App.js')
-+ In the **App.js** file, create the main navigation structure using a Stack Navigator.
++ In the **App.js** file, create the main navigation structure using a **Stack Navigator**.
 + Specify the initial route to be the **Home** screen.
 + The **NavigationContainer** wraps the navigation stack, providing the overall navigation context for the app.
 
 ### 7. Database Integration ('Database.js')
 + Integrate MongoDB to store user registration data as follows :
-    + **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like MongoDB Atlas.
-    + **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app
+    + **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like **MongoDB Atlas**.
+    + **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app.
     + **Database connection** - Set up a database connection within the React Native app, including the React Native credentials.
-    + **Define a schema** - Define a schema for user registration data. This schema should match the structure of the data to be stored in the database. A library like Mongoose or ObjectID can be used to define and work with schemas.
+    + **Define a schema** - Define a schema for user registration data. This schema should match the structure of the data to be stored in the database. A library like **Mongoose** or **ObjectID** can be used to define and work with schemas.
     + **Implement Database Operations** - Implement functions or methods to perform CRUD operations (Create, Read, Update, Delete) in the app : 
         + **Create** - Insert user registration data into the database when a user registers.
-        + **Read** - Retrieve user data from the database to display on the Profile screen.
-        + **Update** - To allow users to modify their registration data.
+        + **Read** - Retrieve user data from the database to display on the **Profile** screen.
+        + **Update** - To allow users to modify their registration data, if needed.
         + **Delete** - To allow users to delete their registration data, if needed.
-    + **API Integration** - Modify the registration screen ('RegisterScreen.js') to interact with the database when a user registers. Make an API call to send user registration data to the database for storage.
+    + **API Integration** - Modify the Registration screen ('RegisterScreen.js') to interact with the database when a user registers. Make an API call to send user registration data to the database for storage.
 
 ### 8. Error Handling and Validation
-+ Ensure to implement proper error handling and validation for database operations and user inputs. 
++ Implement proper error handling and validation for database operations and user inputs. 
 + This enables better user experience and ensures data consistency.
 
 ### 9. Testing
 + Test the app to make sure the database integration and user registration processes work as expected. 
-+ Tools like Postman or Insomnia can be used to test API endpoints.
 
 ### 10. Security
-+ Implement security measures to protect user data and the database. 
 + Proper authentication and authorization mechanisms can be used to ensure that only authorized users can access and modify data.
 
 ### 11. Running the App
 + To run the app, use Expo's development server, which can be started with the **expo start** command.
-+ The Expo DevTools in the web browser provide a QR code, which can be scanned with the Expo Go app on a physical device. 
++ The Expo DevTools in the web browser provide a QR code, which can be scanned with the **Expo Go** app on a physical device. 
 + This loads the app on the device for further testing.
 + Alternatively, the app can be run on an emulator or simulator, as explained in the Expo DevTools.
 
@@ -125,8 +123,8 @@ To run the React Native app using Expo :
 
 ### 3. src
 + It is a directory used to structure the code for better organization and maintainability. 
-+ This contains a folder **components** which contains a file **Database.js**. 
-    + In this case, the **Database.js** file is used to initialise our database called **User_Registration_System**. 
++ This contains a folder **components** which further contains a file **Database.js**. 
+    + This **Database.js** file is used to initialise our database called **User_Registration_System**. 
     + Configuration parameters, like database connection strings, credentials, and other settings, are also defined in this file. 
     + It contains functions/methods for executing database queries and CRUD operations (Create, Read, Update & Delete). 
     + These functionalities allow us to interact with the database.
@@ -146,7 +144,7 @@ To run the React Native app using Expo :
 ## Database Implementation
 ### 1. Setting up the MongoDB connection
 + Establish a connection to the MongoDB database using the **mongoose.connect** method. 
-+ The connection URL (**"mongodb://localhost/your-database-name"**) specifies the location of the MongoDB server and the database to be connected to.
++ The connection URL (**"mongodb://localhost/User_Registration_System"**) specifies the location of the MongoDB server and the database to be connected to.
 
 ### 2. Creating a Mongoose Model
 + A Mongoose Model is defined to represent the structure of the data stored in the MongoDB collection.
