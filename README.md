@@ -54,7 +54,7 @@ To run the React Native app using Expo :
 + The updates can be seen on the device or the emulator in real-time.
 
 ## Implementation
-### 1. Setting up the Project
+### 1. Setting Up the Project
 + Start by creating a new **React Native** project using the **Expo CLI**, which makes it easy to develop and test the app. 
 + Set up the project structure with the necessary files and dependencies.
 
