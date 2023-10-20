@@ -142,7 +142,7 @@ To run the React Native app using Expo :
 + This file defines the project's dependencies and scripts for running, building, and testing the app.
 
 ## Database Implementation
-### 1. Setting up the MongoDB Connection
+### 1. Setting Up the MongoDB Connection
 + Establish a connection to the **MongoDB** database using the **mongoose.connect** method. 
 + The connection URL (**"mongodb://localhost/User_Registration_System"**) specifies the location of the **MongoDB** server and the database to be connected to.
 
