@@ -3,15 +3,15 @@
 + It serves as a user-friendly gateway for individuals or entities to become part of an online community, service, or organization.
 
 ## Design Inspiration Links
-### https://www.freepik.com/premium-vector/mobile-app-login-registration-screen-template_1576877.htm
+### 1. https://www.freepik.com/premium-vector/mobile-app-login-registration-screen-template_1576877.htm
 
-### https://dribbble.com/shots/11622319-Dark-and-Light-Mode-Registration-Process-Design/attachments/3244396?mode=media
+### 2. https://dribbble.com/shots/11622319-Dark-and-Light-Mode-Registration-Process-Design/attachments/3244396?mode=media
 
-### https://youtu.be/YxDlWHyk9z4
+### 3. https://youtu.be/YxDlWHyk9z4
 
-### https://youtu.be/mJ3bGvy0WAY
+### 4. https://youtu.be/mJ3bGvy0WAY
 
-### https://youtu.be/5RUl8exLI-c
+### 5. https://youtu.be/5RUl8exLI-c
 
 ## Process
 To run the React Native app using Expo :
