@@ -82,16 +82,16 @@ The **NavigationContainer** wraps the navigation stack, providing the overall na
 
 ### 7. Database Integration ('Database.js')
 Integrate MongoDB to store user registration data as follows :
-    1. **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like MongoDB Atlas.
-    2. **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app
-    3. **Database connection** - Set up a database connection within the React Native app, including the React Native credentials.
-    4. **Define a schema** - Define a schema for user registration data. This schema should match the structure of the data to be stored in the database. A library like Mongoose or ObjectID can be used to define and work with schemas.
-    5. **Implement Database Operations** - Implement functions or methods to perform CRUD operations (Create, Read, Update, Delete) in the app : 
-        a. **Create** - Insert user registration data into the database when a user registers.
-        b. **Read** - Retrieve user data from the database to display on the Profile screen.
-        c. **Update** - To allow users to modify their registration data.
-        d. **Delete** - To allow users to delete their registration data, if needed.
-    6. **API Integration** - Modify the registration screen ('RegisterScreen.js') to interact with the database when a user registers. Make an API call to send user registration data to the database for storage.
++ **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like MongoDB Atlas.
++ **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app
++ **Database connection** - Set up a database connection within the React Native app, including the React Native credentials.
++ **Define a schema** - Define a schema for user registration data. This schema should match the structure of the data to be stored in the database. A library like Mongoose or ObjectID can be used to define and work with schemas.
++ **Implement Database Operations** - Implement functions or methods to perform CRUD operations (Create, Read, Update, Delete) in the app : 
+    + **Create** - Insert user registration data into the database when a user registers.
+    + **Read** - Retrieve user data from the database to display on the Profile screen.
+    + **Update** - To allow users to modify their registration data.
+    + **Delete** - To allow users to delete their registration data, if needed.
++ **API Integration** - Modify the registration screen ('RegisterScreen.js') to interact with the database when a user registers. Make an API call to send user registration data to the database for storage.
 
 ### 8. Error Handling and Validation
 Ensure to implement proper error handling and validation for database operations and user inputs. This enables better user experience and ensures data consistency.
@@ -138,10 +138,10 @@ Establish a connection to the MongoDB database using the **mongoose.connect** me
 A Mongoose Model is defined to represent the structure of the data stored in the MongoDB collection.
 
 ### 3. CRUD Operations
-**Create (Insert) :** To create and save new user documents to the database.
-**Read (Retrieve) :** To retrieve user data from the database. It uses the 'User.find' method to query the "users" collection and retrieve all user documents.
-**Update (Modify) :** To update user information.
-**Delete (Deletion) :** To delete user information.
++ **Create (Insert) :** To create and save new user documents to the database.
++ **Read (Retrieve) :** To retrieve user data from the database. It uses the 'User.find' method to query the "users" collection and retrieve all user documents.
++ **Update (Modify) :** To update user information.
++ **Delete (Deletion) :** To delete user information.
 
 ### 4. Express Routes
 The routes defined using the Express.js framework. These routes listen for specific HTTP requests and handle corresponding database operations.
