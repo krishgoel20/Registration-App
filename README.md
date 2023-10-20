@@ -40,7 +40,7 @@ To run the React Native app using Expo :
 + A QR code will be visible that can be used to run the app on a physical device, as well as options for running on a simulator or emulator.
 
 ### 5. Running on Physical Device
-+ Open the Expo Go app on your physical device (Android or iOS).
++ Open the **Expo Go** app on your physical device (Android or iOS).
 + Scan the QR code from the Expo DevTools in the browser using the Expo Go app. This will load the app on the device.
 
 ### 6. Running on Emulator/Simulator
