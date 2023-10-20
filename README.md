@@ -24,7 +24,7 @@ To run the React Native app using Expo :
 ### 1. Pre-requisites
 + Make sure to have **Node.js** installed on the machine. It can be downloaded from **"https://nodejs.org/en"**.
 + Install Expo CLI globally. This can be done by running the command : **npm install -g expo-cli**.
-+ Ensure to have Expo Go installed on your Android or iOS device if it's planned to run the app on a physical device.
++ Ensure to have **Expo Go** installed on your Android or iOS device if it's planned to run the app on a physical device.
 
 ### 2. Set up the Project
 + Create a new directory for the project and navigate to it in the Terminal.
