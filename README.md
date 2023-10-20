@@ -1,5 +1,5 @@
 # Registration-App
-A Registration App is a web or mobile application designed to streamline the process of user registration and sign-up. It serves as a user-friendly gateway for individuals or entities to become part of an online community, service, or organization.
+A Registration App is a Web or Mobile Application designed to streamline the process of User Registration and Sign-up. It serves as a user-friendly gateway for individuals or entities to become part of an online community, service, or organization.
 
 ## Design Inspiration Links
 ### 1. Link 1
