@@ -107,6 +107,6 @@ This file is used to specify which files and directories should be ignored and n
 It is a lock file which keeps track of exact dependency versions.
 
 ### 6. package.json
-This file define the project's dependencies and scripts for running, building, and testing the app.
+This file defines the project's dependencies and scripts for running, building, and testing the app.
 
 ## Database Implementation
