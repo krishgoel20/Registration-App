@@ -18,7 +18,6 @@ https://youtu.be/mJ3bGvy0WAY
 https://youtu.be/5RUl8exLI-c
 
 ## Process
-
 To run the React Native app using Expo :
 
 ### 1. Pre-requisites
@@ -68,9 +67,9 @@ The **'HomeScreen'** component contains a single button that, when pressed, navi
 This is the component where the user can input his/her Name and E-mail ID for registration.
 React hooks are used to manage the component's state (**'name'** and **'email'** fields).
 When the user presses the **"Register"** button, the **'handleRegister'** function is called. Inside this function : 
-    a. An API call is made to the specified endpoint (**'YOUR_API_ENDPOINT'**) using Axios to register the user.
-    b. If the registration is successful, the response data is logged to the console and then navigated to the **"Profile"** screen, passing the user's name and email as route parameters.
-    c. If an error occurs during registration, the error is logged to the console.
+    1. An API call is made to the specified endpoint (**'YOUR_API_ENDPOINT'**) using Axios to register the user.
+    2. If the registration is successful, the response data is logged to the console and then navigated to the **"Profile"** screen, passing the user's name and email as route parameters.
+    3. If an error occurs during registration, the error is logged to the console.
 
 ### 5. Profile Screen ('ProfileScreen.js')
 The **'ProfileScreen.js'** component displays the user's name and email, which are received as route parameters.
