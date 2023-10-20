@@ -33,7 +33,7 @@ Follow the prompts to configure the project. This generates a project structure 
 ### 3. Navigate to the Project directory
 Use the command : **cd Registration-App**.
 
-### 4. Start the Development server
+### 4. Start the Development Server
 To start the development server, use the command : **expo start**.
 This will open a new tab in the web browser with the Expo DevTools. A QR code will be visible that can be used to run the app on a physical device, as well as options for running on a simulator or emulator.
 
@@ -80,11 +80,11 @@ In the **App.js** file, create the main navigation structure using a Stack Navig
 Specify the initial route to be the **Home** screen.
 The **NavigationContainer** wraps the navigation stack, providing the overall navigation context for the app.
 
-### 7. Database Integration
+### 7. Database Integration ('Database.js')
 Integrate MongoDB to store user registration data as follows :
-    1.  **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like MongoDB Atlas.
-    2. **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app
-    3. **Database connection** - Set up a database connection within the React Native app, including the React Native credentials.
+    - **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like MongoDB Atlas.
+    - **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app
+    - **Database connection** - Set up a database connection within the React Native app, including the React Native credentials.
     4. **Define a schema** - Define a schema for user registration data. This schema should match the structure of the data to be stored in the database. A library like Mongoose or ObjectID can be used to define and work with schemas.
     5. **Implement Database Operations** - Implement functions or methods to perform CRUD operations (Create, Read, Update, Delete) in the app : 
         a. **Create** - Insert user registration data into the database when a user registers.
