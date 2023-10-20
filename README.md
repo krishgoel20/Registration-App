@@ -82,9 +82,9 @@ The **NavigationContainer** wraps the navigation stack, providing the overall na
 
 ### 7. Database Integration ('Database.js')
 Integrate MongoDB to store user registration data as follows :
-    - **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like MongoDB Atlas.
-    - **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app
-    - **Database connection** - Set up a database connection within the React Native app, including the React Native credentials.
+    1. **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like MongoDB Atlas.
+    2. **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app
+    3. **Database connection** - Set up a database connection within the React Native app, including the React Native credentials.
     4. **Define a schema** - Define a schema for user registration data. This schema should match the structure of the data to be stored in the database. A library like Mongoose or ObjectID can be used to define and work with schemas.
     5. **Implement Database Operations** - Implement functions or methods to perform CRUD operations (Create, Read, Update, Delete) in the app : 
         a. **Create** - Insert user registration data into the database when a user registers.
