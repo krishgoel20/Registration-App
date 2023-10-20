@@ -81,7 +81,29 @@ In the **'App.js'** file, create the main navigation structure using a Stack Nav
 Specify the initial route to be the **"Home"** screen.
 The **'NavigationContainer'** wraps the navigation stack, providing the overall navigation context for the app.
 
-### 7. Running the App
+### 7. Database Integration
+Integrate MongoDB to store user registration data as follows :
+    1.  **Set Up MongoDB** - Make sure to have a MongoDB server up and running. Either set up a local MongoDB server or use a cloud-based MongoDB service like MongoDB Atlas.
+    2. **Install a MongoDB library** - Install a library to connect to MongoDB from the React Native app
+    3. **Database connection** - Set up a database connection within the React Native app, including the React Native credentials.
+    4. **Define a schema** - Define a schema for user registration data. This schema should match the structure of the data to be stored in the database. A library like Mongoose or ObjectID can be used to define and work with schemas.
+    5. **Implement Database Operations** - Implement functions or methods to perform CRUD operations (Create, Read, Update, Delete) in the app : 
+        a. **Create** - Insert user registration data into the database when a user registers.
+        b. **Read** - Retrieve user data from the database to display on the Profile screen.
+        c. **Update** - To allow users to modify their registration data.
+        d. **Delete** - To allow users to delete their registration data, if needed.
+    6. **API Integration** - Modify the registration screen ('RegisterScreen.js') to interact with the database when a user registers. Make an API call to send user registration data to the database for storage.
+
+### 8. Error Handling and Validation
+Ensure to implement proper error handling and validation for database operations and user inputs. This enables better user experience and ensures data consistency.
+
+### 9. Testing
+Test the app to make sure the database integration and user registration processes work as expected. Tools like Postman or Insomnia can be used to test API endpoints.
+
+### 10. Security
+Implement security measures to protect user data and the database. Proper authentication and authorization mechanisms can be used to ensure that only authorized users can access and modify data.
+
+### 11. Running the App
 To run the app, use Expo's development server, which can be started with the **'expo start'** command.
 The Expo DevTools in the web browser provide a QR code, which can be scanned with the Expo Go app on a physical device. 
 This loads the app on the device for further testing.
