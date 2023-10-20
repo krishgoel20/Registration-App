@@ -147,7 +147,7 @@ To run the React Native app using Expo :
 + The connection URL (**"mongodb://localhost/User_Registration_System"**) specifies the location of the MongoDB server and the database to be connected to.
 
 ### 2. Creating a Mongoose Model
-+ A Mongoose Model is defined to represent the structure of the data stored in the MongoDB collection.
++ A Mongoose Model is defined to represent the structure of the data stored in a MongoDB collection.
 
 ### 3. CRUD Operations
 + **Create (Insert) :** To create and save new user documents to the database.
@@ -156,10 +156,10 @@ To run the React Native app using Expo :
 + **Delete (Deletion) :** To delete user information.
 
 ### 4. Express Routes
-+ The routes defined using the Express.js framework. 
-+ These routes listen for specific HTTP requests and handle corresponding database operations.
++ The routes defined using the **Express.js** framework. 
++ These routes listen for specific **HTTP** requests and handle corresponding database operations.
 
 ### 5. Error Handling
 + Essential in database operations. 
-+ 'Try' and 'catch' blocks handle potential errors in database queries. 
++ **Try** and **catch** blocks handle potential errors in database queries. 
 + If an error occurs, an appropriate response with an error status and message is sent back to the client.
