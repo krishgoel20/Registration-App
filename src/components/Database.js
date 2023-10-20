@@ -39,7 +39,7 @@ const { MongoClient, ObjectID } = require('mongodb');
 
 const uri = 'mongodb://localhost:3000/User_Registration_System';
 
-async function insert() {
+async function insertUser() {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
 
   try 
@@ -69,9 +69,9 @@ async function insert() {
   }
 }
 
-insert();
+insertUser();
 
-async function read() {
+async function readUser() {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
 
   try 
@@ -104,9 +104,9 @@ async function read() {
   }
 }
 
-read();
+readUser();
 
-async function update(userID, updatedData) {
+async function updateUser(userID, updatedData) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
 
   try 
@@ -150,7 +150,7 @@ async function update(userID, updatedData) {
   }
 }
 
-update('YOUR_USER_ID',{ email: 'new-email@example.com', name: 'New Name' });
+updateUser('YOUR_USER_ID',{ email: 'new-email@example.com', name: 'New Name' });
 
 async function deleteUser(userID) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
