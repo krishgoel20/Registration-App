@@ -67,9 +67,9 @@ The **HomeScreen** component contains a single button that, when pressed, naviga
 This is the component where the user can input his/her Name and E-mail ID for registration.
 React hooks are used to manage the component's state (**name** and **email** fields).
 When the user presses the **Register** button, the **handleRegister** function is called. Inside this function : 
-    1. An API call is made to the specified endpoint (**YOUR_API_ENDPOINT**) using Axios to register the user.
-    2. If the registration is successful, the response data is logged to the console and then navigated to the **Profile** screen, passing the user's name and email as route parameters.
-    3. If an error occurs during registration, the error is logged to the console.
++ An API call is made to the specified endpoint (**YOUR_API_ENDPOINT**) using Axios to register the user.
++ If the registration is successful, the response data is logged to the console and then navigated to the **Profile** screen, passing the user's name and email as route parameters.
++ If an error occurs during registration, the error is logged to the console.
 
 ### 5. Profile Screen ('ProfileScreen.js')
 The **ProfileScreen.js** component displays the user's name and email, which are received as route parameters.
