@@ -35,7 +35,7 @@ app.post('/register', async (req, res) => {
 });
 
 // server.js
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectID } = require('mongodb');
 
 const uri = 'mongodb://localhost:3000/User_Registration_System';
 
@@ -63,37 +63,13 @@ async function insert() {
   {
     console.error('Error watching for changes:', error);
   }
-}
-
-insert();
-
-async function deletion() {
-  const client = new MongoClient(uri, { useUnifiedTopology: true });
-
-  try
+  finally
   {
-    await client.connect();
-    const db = client.db();
-    const collection = db.collection('users');
-
-    const changeStream = collection.watch();
-
-    changeStream.on('change', (change) => {
-      if (change.operationType === 'deletion')
-      {
-        // A new user has been registered; can perform updates here
-        console.log('New user registered:', change.fullDocument);
-        // Perform update operations here
-      }
-    });
-  } 
-  catch (error) 
-  {
-    console.error('Error watching for changes:', error);
+    client.close();
   }
 }
 
-deletion();
+insert();
 
 async function read() {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
@@ -104,26 +80,33 @@ async function read() {
     const db = client.db();
     const collection = db.collection('users');
 
-    const changeStream = collection.watch();
+    const users = await collection.find({}).toArray();
+    console.log('User data from the collection: ', users);
+
+    /*const changeStream = collection.watch();
 
     changeStream.on('change', (change) => {
-      if (change.operationType === 'insert') 
+      if (change.operationType === 'read') 
       {
         // A new user has been registered; can perform updates here
         console.log('New user registered:', change.fullDocument);
         // Perform update operations here
       }
-    });
+    });*/
   } 
   catch (error) 
   {
-    console.error('Error watching for changes:', error);
+    console.error('Error reading data from the collection:', error);
+  }
+  finally
+  {
+    client.close();
   }
 }
 
 read();
 
-async function update() {
+async function update(userID, updatedData) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
 
   try 
@@ -132,7 +115,21 @@ async function update() {
     const db = client.db();
     const collection = db.collection('users');
 
-    const changeStream = collection.watch();
+    const result = await collection.updateOne(
+      { _ID: ObjectID(userID) },
+      { $set: updatedData }
+    );
+
+    if (result.modifiedCount > 0)
+    {
+      console.log('User data updated successfully');
+    }
+    else
+    {
+      console.log('No user data updated');
+    }
+
+    /*const changeStream = collection.watch();
 
     changeStream.on('change', (change) => {
       if (change.operationType === 'insert') 
@@ -141,40 +138,59 @@ async function update() {
         console.log('New user registered:', change.fullDocument);
         // Perform update operations here
       }
-    });
+    });*/
   } 
   catch (error) 
   {
-    console.error('Error watching for changes:', error);
+    console.error('Error updating user data:', error);
+  }
+  finally
+  {
+    client.close();
   }
 }
 
-update();
+update('YOUR_USER_ID',{ email: 'new-email@example.com', name: 'New Name' });
 
-async function search() {
+async function deleteUser(userID) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
 
-  try 
+  try
   {
     await client.connect();
     const db = client.db();
     const collection = db.collection('users');
 
-    const changeStream = collection.watch();
+    const result = await collection.deleteOne({ _ID: ObjectID(userID) });
+
+    if (result.deletedCount > 0)
+    {
+      console.log('User data deleted successfully');
+    }
+    else
+    {
+      console.log('No user data deleted');
+    }
+
+    /*const changeStream = collection.watch();
 
     changeStream.on('change', (change) => {
-      if (change.operationType === 'insert') 
+      if (change.operationType === 'deletion')
       {
         // A new user has been registered; can perform updates here
         console.log('New user registered:', change.fullDocument);
         // Perform update operations here
       }
-    });
+    });*/
   } 
   catch (error) 
   {
-    console.error('Error watching for changes:', error);
+    console.error('Error deleting user data:', error);
+  }
+  finally
+  {
+    client.close();
   }
 }
 
-search();
+deleteUser('YOUR_USER_ID');
