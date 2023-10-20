@@ -27,7 +27,7 @@ Ensure to have Expo Go installed on your Android or iOS device if it's planned t
 
 ### 2. Set up the Project
 Create a new directory for the project and navigate to it in the Terminal.
-Create a new Expo project using the **"expo init"** command : **expo init Registration-App**. Choose the "blank" template or any other template preferred.
+Create a new Expo project using the **expo init** command : **expo init Registration-App**. Choose the "blank" template or any other template preferred.
 Follow the prompts to configure the project. This generates a project structure with the necessary files.
 
 ### 3. Navigate to the Project directory
@@ -60,25 +60,25 @@ The React Navigation library is used for navigation in the app.
 In this case, a **Stack Navigator**, provided by the library, is used to navigate between different screens.
 
 ### 3. Home Screen ('HomeScreen.js')
-Create the **'HomeScreen'** component, which is the initial screen of the app. 
-The **'HomeScreen'** component contains a single button that, when pressed, navigates the user to the **'Register'** screen.
+Create the **HomeScreen** component, which is the initial screen of the app. 
+The **HomeScreen** component contains a single button that, when pressed, navigates the user to the **Register** screen.
 
 ### 4. Register Screen ('RegisterScreen.js')
 This is the component where the user can input his/her Name and E-mail ID for registration.
-React hooks are used to manage the component's state (**'name'** and **'email'** fields).
-When the user presses the **"Register"** button, the **'handleRegister'** function is called. Inside this function : 
-    1. An API call is made to the specified endpoint (**'YOUR_API_ENDPOINT'**) using Axios to register the user.
-    2. If the registration is successful, the response data is logged to the console and then navigated to the **"Profile"** screen, passing the user's name and email as route parameters.
+React hooks are used to manage the component's state (**name** and **email** fields).
+When the user presses the **Register** button, the **handleRegister** function is called. Inside this function : 
+    1. An API call is made to the specified endpoint (**YOUR_API_ENDPOINT**) using Axios to register the user.
+    2. If the registration is successful, the response data is logged to the console and then navigated to the **Profile** screen, passing the user's name and email as route parameters.
     3. If an error occurs during registration, the error is logged to the console.
 
 ### 5. Profile Screen ('ProfileScreen.js')
-The **'ProfileScreen.js'** component displays the user's name and email, which are received as route parameters.
+The **ProfileScreen.js** component displays the user's name and email, which are received as route parameters.
 This screen is reached after successful registration and displays the user's registration details.
 
 ### 6. Navigation Container ('App.js')
-In the **'App.js'** file, create the main navigation structure using a Stack Navigator.
-Specify the initial route to be the **"Home"** screen.
-The **'NavigationContainer'** wraps the navigation stack, providing the overall navigation context for the app.
+In the **App.js** file, create the main navigation structure using a Stack Navigator.
+Specify the initial route to be the **Home** screen.
+The **NavigationContainer** wraps the navigation stack, providing the overall navigation context for the app.
 
 ### 7. Database Integration
 Integrate MongoDB to store user registration data as follows :
@@ -118,7 +118,7 @@ This is a directory where various assets and resources are stored, which are pub
 ### 3. src
 It is a directory used to structure the code for better organization and maintainability. 
 This contains a folder **components** which contains a file **Database.js**. In this case, the **Database.js** file is used to initialise our database called **User_Registration_System**. Configuration parameters, like database connection strings, credentials, and other settings, are also defined in this file. It contains functions/methods for executing database queries and other operations like Insert, Delete, Read, Update & Search. These functionalities allow us to interact with the database.
-This also contains a folder **screens** which holds the files "**HomeScreen.js**", "**RegisterScreen.js**" & "**ProfileScreen.js**" that represent the different screens of the app.
+This also contains a folder **screens** which holds the files **HomeScreen.js**, **RegisterScreen.js** & **ProfileScreen.js** that represent the different screens of the app.
 Other than the **components** and the **screen** folders, the **src** folder also contains some files which are responsible for the basic layout and design of the app like **App.css**, **App.js**, **Background.css**, etc. The **App.js** file is the entry point of the app. It is the main component that sets up the navigation and renders the app's structure.
 
 ### 4. .gitignore
@@ -132,7 +132,7 @@ This file defines the project's dependencies and scripts for running, building, 
 
 ## Database Implementation
 ### 1. Setting up the MongoDB connection
-Establish a connection to the MongoDB database using the '**mongoose.connect**' method. The connection URL ('**mongodb://localhost/your-database-name**') specifies the location of the MongoDB server and the database to be connected to.
+Establish a connection to the MongoDB database using the **mongoose.connect** method. The connection URL (**"mongodb://localhost/your-database-name"**) specifies the location of the MongoDB server and the database to be connected to.
 
 ### 2. Creating a Mongoose Model
 A Mongoose Model is defined to represent the structure of the data stored in the MongoDB collection.
