@@ -50,7 +50,7 @@ To run the React Native app using Expo :
 + The app can be now seen running on the physical device or the emulator/simulator.
 
 ### 8. Code and Test
-+ Changes can be made to the code, and the **Expo development server** will automatically reload the app with the new code changes. 
++ Changes can be made to the code, and the **Expo Development Server** will automatically reload the app with the new code changes. 
 + The updates can be seen on the device or the emulator in real-time.
 
 ## Implementation
