@@ -95,6 +95,18 @@ This directory contains all the dependencies and packages that the project relie
 This is a directory where various assets and resources are stored, which are publicly accessible within the app. In this case, a folder called **images** has been created inside this directory, containing the **background** image and the **logo** icon for the app.
 
 ### 3. src
-A directory used to structure the code for better organization and maintainability. This contains a folder **components** which contains a file **Database.js**.
+It is a directory used to structure the code for better organization and maintainability. 
+This contains a folder **components** which contains a file **Database.js**. In this case, the **Database.js** file is used to initialise our database called **User_Registration_System**. Configuration parameters, like database connection strings, credentials, and other settings, are also defined in this file. It contains functions/methods for executing database queries and other operations like Insert, Delete, Read, Update & Search. These functionalities allow us to interact with the database.
+This also contains a folder **screens** which holds the files "**HomeScreen.js**", "**RegisterScreen.js**" & "**ProfileScreen.js**" that represent the different screens of the app.
+Other than the **components** and the **screen** folders, the **src** folder also contains some files which are responsible for the basic layout and design of the app like **App.css**, **App.js**, **Background.css**, etc. The **App.js** file is the entry point of the app. It is the main component that sets up the navigation and renders the app's structure.
+
+### 4. .gitignore
+This file is used to specify which files and directories should be ignored and not tracked by version control systems like Git.
+
+### 5. package-lock.json
+It is a lock file which keeps track of exact dependency versions.
+
+### 6. package.json
+This file define the project's dependencies and scripts for running, building, and testing the app.
 
 ## Database Implementation
