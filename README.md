@@ -151,7 +151,7 @@ To run the **React Native** app using **Expo** :
 
 ### 3. CRUD Operations
 + **Create (Insert) :** To create and save new user documents to the database.
-+ **Read (Retrieve) :** To retrieve user data from the database. It uses the **'User.find'** method to query the **"users"** collection and retrieve all user documents.
++ **Read (Retrieve) :** To retrieve user data from the database. It uses the **User.find** method to query the **users** collection and retrieve all user documents.
 + **Update (Modify) :** To update user information.
 + **Delete (Deletion) :** To delete user information.
 
