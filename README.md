@@ -19,11 +19,11 @@
 + https://youtu.be/5RUl8exLI-c
 
 ## Process
-To run the React Native app using Expo :
+To run the **React Native** app using **Expo** :
 
 ### 1. Pre-requisites
 + Make sure to have **Node.js** installed on the machine. It can be downloaded from **"https://nodejs.org/en"**.
-+ Install Expo CLI globally. This can be done by running the command : **npm install -g expo-cli**.
++ Install **Expo CLI** globally. This can be done by running the command : **npm install -g expo-cli**.
 + Ensure to have **Expo Go** installed on your Android or iOS device if it's planned to run the app on a physical device.
 
 ### 2. Set Up the Project
@@ -71,11 +71,11 @@ To run the React Native app using Expo :
 + React hooks are used to manage the component's state (**name**, **password**, **email** fields).
 + When the user presses the **Register** button, the **handleRegister** function is called. Inside this function :
     + An **API call** is made to the specified endpoint (**API_ENDPOINT**) using **Axios** to register the user.
-    + If the registration is successful, the response data is logged to the console and then navigated to the **Profile** screen, passing the user's Name and E-mail as route parameters.
+    + If the registration is successful, the response data is logged to the console and then navigated to the **Profile** screen, passing the user's Name and E-mail ID as route parameters.
     + If an error occurs during registration, the error is logged to the console.
 
 ### 5. Profile Screen ('ProfileScreen.js')
-+ The **ProfileScreen.js** component displays the user's Name and E-mail, which are received as route parameters.
++ The **ProfileScreen.js** component displays the user's Name and E-mail ID, which are received as route parameters.
 + This screen is reached after successful registration and displays the user's registration details.
 
 ### 6. Navigation Container ('App.js')
